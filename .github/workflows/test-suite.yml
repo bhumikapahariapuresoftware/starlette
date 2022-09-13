@@ -48,12 +48,13 @@ jobs:
               python3 -m pip install virtualenv && python3 -m venv py38-venv && \
               source py38-venv/bin/activate && \
  
-              python -m pip install --upgrade pip && \
-              python --version && \
+              python3 -m pip install --upgrade pip && \
+              python3 --version && \
               uname -m && \
               whoami && \
               pwd && \
               
+              pip3 install setuptools mkautodoc python3-multipart && \
               scripts/install && \
               scripts/check && \
               scripts/build && \
